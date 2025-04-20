@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Define the student structure
+
 struct Student {
     int rollNo;
     char name[50];
@@ -12,7 +12,7 @@ struct Student {
 
 struct Student* head = NULL;
 
-// Function to create a new student node
+
 struct Student* createStudent(int rollNo, char name[], float marks) {
     struct Student* newStudent = (struct Student*)malloc(sizeof(struct Student));
     newStudent->rollNo = rollNo;
@@ -22,7 +22,7 @@ struct Student* createStudent(int rollNo, char name[], float marks) {
     return newStudent;
 }
 
-// Add a student to the end of the list
+
 void addStudent() {
     int rollNo;
     char name[50];
@@ -31,7 +31,7 @@ void addStudent() {
     printf("Enter Roll No: ");
     scanf("%d", &rollNo);
     printf("Enter Name: ");
-    scanf(" %[^\n]", name); // Read full line
+    scanf(" %[^\n]", name); 
     printf("Enter Marks: ");
     scanf("%f", &marks);
 
@@ -50,7 +50,7 @@ void addStudent() {
     printf("Student added successfully.\n");
 }
 
-// Display all students
+
 void displayStudents() {
     if (head == NULL) {
         printf("No student records found.\n");
@@ -65,7 +65,7 @@ void displayStudents() {
     }
 }
 
-// Search for a student by roll number
+
 void searchStudent() {
     int rollNo;
     printf("Enter Roll No to search: ");
@@ -83,7 +83,7 @@ void searchStudent() {
     printf("Student with Roll No %d not found.\n", rollNo);
 }
 
-// Delete a student by roll number
+
 void deleteStudent() {
     int rollNo;
     printf("Enter Roll No to delete: ");
@@ -112,7 +112,7 @@ void deleteStudent() {
     printf("Student deleted successfully.\n");
 }
 
-// Main function with menu using while loop
+
 int main() {
     int choice = 0;
 
